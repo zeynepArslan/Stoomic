@@ -6,7 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://users.jyu.fi/~syibkhan/university.owl"/>
+    <owl:Ontology rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl"/>
     
 
 
@@ -21,157 +21,68 @@
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasAccountant -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasDepartment -->
 
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasAccountant">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#University"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#hasAccountant"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Accountant"/>
-            </owl:Restriction>
-        </rdfs:range>
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasDepartment">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Student"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#Department"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasClassRoom -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasInterestIn -->
 
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasClassRoom">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Department"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Room"/>
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasInterestIn">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Student"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#ResearchInterest"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasDepartment -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasResearchArea -->
 
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasDepartment">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Faculty"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Department"/>
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasResearchArea">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Student"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#ResearchArea"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasFacilityFor -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasTitle -->
 
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasFacilityFor">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Lab"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasTitle">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#AcademicianTitle"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasLecturer -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasWorkAt -->
 
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasLecturer">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Department"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#hasLecturer"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Lecturer"/>
-            </owl:Restriction>
-        </rdfs:range>
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasWorkAt">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#University"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasProfessor -->
+    <!-- https://github.com/zeynepArslan/Stoomic#in -->
 
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasProfessor">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Faculty"/>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#hasProfessor"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Professor"/>
-            </owl:Restriction>
-        </rdfs:range>
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic#in">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#University"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#Country"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasPublication -->
+    <!-- https://github.com/zeynepArslan/Stoomic#workedTogether -->
 
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasPublication">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Researcher"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Publication"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasRactor -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasRactor">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#University"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Administrator"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasStudent -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasStudent">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Department"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasWon -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasWon">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Publication"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Achivement"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasWorkAt -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasWorkAt">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Professor"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#University"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#inChargeOf -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#inChargeOf">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Professor"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#isHappenIn -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#isHappenIn">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Room"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Course"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#isProgrammingTeacherOf -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#isProgrammingTeacherOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Professor"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#isStudy -->
-
-    <owl:ObjectProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#isStudy">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
-        <rdfs:range rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic#workedTogether">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
     </owl:ObjectProperty>
     
 
@@ -187,70 +98,66 @@
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasDescription -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasDescription -->
 
-    <owl:DatatypeProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasDescription">
+    <owl:DatatypeProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasDescription">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasECTS -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasECTS -->
 
-    <owl:DatatypeProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasECTS">
+    <owl:DatatypeProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasECTS">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Course"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasFirstName -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasFirstName -->
 
-    <owl:DatatypeProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasFirstName">
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
+    <owl:DatatypeProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasFirstName">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Student"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasLastName -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasLastName -->
 
-    <owl:DatatypeProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasLastName">
+    <owl:DatatypeProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasLastName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Student"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasNumberOfStudent -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasNumberOfStudent -->
 
-    <owl:DatatypeProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasNumberOfStudent">
+    <owl:DatatypeProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasNumberOfStudent">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasPassMark -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasPassMark -->
 
-    <owl:DatatypeProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasPassMark">
+    <owl:DatatypeProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasPassMark">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Course"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#hasStudentID -->
+    <!-- https://github.com/zeynepArslan/Stoomic#hasStudentID -->
 
-    <owl:DatatypeProperty rdf:about="http://users.jyu.fi/~syibkhan/university.owl#hasStudentID">
+    <owl:DatatypeProperty rdf:about="https://github.com/zeynepArslan/Stoomic#hasStudentID">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Student"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -267,253 +174,63 @@
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Accountant -->
+    <!-- https://github.com/zeynepArslan/Stoomic#Academician -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Accountant">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Administrator"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#Academician"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Achivement -->
+    <!-- https://github.com/zeynepArslan/Stoomic#AcademicianTitle -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Achivement"/>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#AcademicianTitle"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Administrator -->
+    <!-- https://github.com/zeynepArslan/Stoomic#AttiributeNumber -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Administrator">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Employee"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#AttiributeNumber"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#BachelorProgram -->
+    <!-- https://github.com/zeynepArslan/Stoomic#Country -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#BachelorProgram">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#MastersProgram"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#PhdProgram"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#Country"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#ClassRoom -->
+    <!-- https://github.com/zeynepArslan/Stoomic#Department -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#ClassRoom">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Room"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#HallRoom"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Lab"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#Department"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Course -->
+    <!-- https://github.com/zeynepArslan/Stoomic#Publication -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Course"/>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#Publication"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Dean -->
+    <!-- https://github.com/zeynepArslan/Stoomic#ResearchArea -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Dean">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Administrator"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#ResearchArea"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#DegreeStudent -->
+    <!-- https://github.com/zeynepArslan/Stoomic#ResearchInterest -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#DegreeStudent">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#MastersStudent"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#PhdStudent"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#ResearchInterest"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Department -->
+    <!-- https://github.com/zeynepArslan/Stoomic#Student -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Department">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Unit"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Faculty"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#Student"/>
     
 
 
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Employee -->
+    <!-- https://github.com/zeynepArslan/Stoomic#University -->
 
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Employee"/>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Faculty -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Faculty">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Unit"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#hasDepartment"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Department"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#HallRoom -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#HallRoom">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Room"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Lab"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Lab -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Lab">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Room"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#hasFacilityFor"/>
-                <owl:allValuesFrom rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#PhdStudent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#LabAssistant -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#LabAssistant">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://users.jyu.fi/~syibkhan/university.owl#PhdStudent"/>
-                    <rdf:Description rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Researcher"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Employee"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Lecturer -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Lecturer">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Employee"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Professor"/>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#MastersProgram -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#MastersProgram">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#PhdProgram"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#MastersStudent -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#MastersStudent">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
-        <owl:disjointWith rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#PhdStudent"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#PhdProgram -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#PhdProgram">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#PhdStudent -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#PhdStudent">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Professor -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Professor">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Employee"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Program -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Program"/>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Publication -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Publication"/>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Ractor -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Ractor">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Administrator"/>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Researcher -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Researcher">
-        <rdfs:subClassOf rdf:resource="http://users.jyu.fi/~syibkhan/university.owl#Employee"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Lecturer"/>
-                    <rdf:Description rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Professor"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Room -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Room"/>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Student -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Student"/>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#Unit -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#Unit"/>
-    
-
-
-    <!-- http://users.jyu.fi/~syibkhan/university.owl#University -->
-
-    <owl:Class rdf:about="http://users.jyu.fi/~syibkhan/university.owl#University"/>
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#University"/>
 </rdf:RDF>
 
 
