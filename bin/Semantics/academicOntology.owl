@@ -87,6 +87,34 @@
     
 
 
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#from -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#from">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#Degree"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#hasContactInfo -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#hasContactInfo">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Student"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#ContactInfo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#hasDegree -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#hasDegree">
+        <rdfs:domain rdf:resource="https://github.com/zeynepArslan/Stoomic#Academician"/>
+        <rdfs:range rdf:resource="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#Degree"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -231,6 +259,58 @@
     <!-- https://github.com/zeynepArslan/Stoomic#University -->
 
     <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic#University"/>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#ContactInfo -->
+
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#ContactInfo"/>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#Degree -->
+
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#Degree"/>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#GraduateUniversity -->
+
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#GraduateUniversity">
+        <rdfs:subClassOf rdf:resource="https://github.com/zeynepArslan/Stoomic#University"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#Mail -->
+
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#Mail">
+        <rdfs:subClassOf rdf:resource="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#ContactInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#PhDUniversity -->
+
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#PhDUniversity">
+        <rdfs:subClassOf rdf:resource="https://github.com/zeynepArslan/Stoomic#University"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#PhoneNumber -->
+
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#PhoneNumber">
+        <rdfs:subClassOf rdf:resource="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#ContactInfo"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/zeynepArslan/Stoomic/academicOntology.owl#UndergraduateUniversity -->
+
+    <owl:Class rdf:about="https://github.com/zeynepArslan/Stoomic/academicOntology.owl#UndergraduateUniversity">
+        <rdfs:subClassOf rdf:resource="https://github.com/zeynepArslan/Stoomic#University"/>
+    </owl:Class>
 </rdf:RDF>
 
 

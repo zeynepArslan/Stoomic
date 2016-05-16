@@ -9,6 +9,9 @@ import com.jaunt.UserAgent;
 public class OzyeginWebScraper {
 
 	public OzyeginWebScraper(String url) {
+		
+		//TODO
+		
 		try {
 			UserAgent userAgent = new UserAgent();
 
