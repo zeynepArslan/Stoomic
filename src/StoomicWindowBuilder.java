@@ -14,6 +14,8 @@ public class StoomicWindowBuilder {
 	private JPanel enterPanel;
 	private JPanel studentPanel;
 	private JPanel academicianPanel;
+	private JPanel LogInPanel;
+	private JPanel KayıtPanel;
 	
 
 	/**
@@ -68,10 +70,20 @@ public class StoomicWindowBuilder {
 		LogInPanel.setLayout(null);
 		LogInPanel.setVisible(false);
 		
-		final JPanel SignUpPanel = new JPanel();
-		frame.getContentPane().add(SignUpPanel, "name_1463376149184625000");
-		SignUpPanel.setLayout(null);
-		SignUpPanel.setVisible(false);
+		final JPanel KayıtPanel = new JPanel();
+		frame.getContentPane().add(KayıtPanel, "name_1463390171180866000");
+		KayıtPanel.setLayout(null);
+		
+		JButton btnBack_1 = new JButton("Back");
+		btnBack_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LogInPanel.setVisible(false);
+				studentPanel.setVisible(true);
+			}
+		});
+		btnBack_1.setBounds(78, 100, 117, 29);
+		LogInPanel.add(btnBack_1);
+		LogInPanel.setVisible(false);
 		
 		JButton btnAcademicianEntrance = new JButton("Academician Entrance");
 		btnAcademicianEntrance.addActionListener(new ActionListener() {
@@ -120,12 +132,36 @@ public class StoomicWindowBuilder {
 		studentPanel.add(btnBackButton_1);
 		
 		JButton btnSignUp = new JButton("Sign Up");
+		btnSignUp.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				KayıtPanel.setVisible(true);
+				studentPanel.setVisible(false);
+			}
+		});
 		btnSignUp.setBounds(165, 173, 117, 29);
 		studentPanel.add(btnSignUp);
 		
 		JButton btnLogIn = new JButton("Log In");
+		btnLogIn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				LogInPanel.setVisible(true);
+				studentPanel.setVisible(false);
+			}
+		});
 		btnLogIn.setBounds(165, 112, 117, 29);
 		studentPanel.add(btnLogIn);
+		
+		
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				KayıtPanel.setVisible(false);
+				studentPanel.setVisible(true);
+			}
+		});
+		btnBack.setBounds(104, 171, 117, 29);
+		KayıtPanel.add(btnBack);
 		
 	
 	}
