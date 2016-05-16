@@ -12,8 +12,8 @@ public class StoomicWindowBuilder {
 
 	private JFrame frame;
 	private JPanel enterPanel;
-	private JPanel academicianPanel;
 	private JPanel studentPanel;
+	private JPanel academicianPanel;
 	
 
 	/**
@@ -51,31 +51,82 @@ public class StoomicWindowBuilder {
 		final JPanel enterPanel = new JPanel();
 		frame.getContentPane().add(enterPanel, "name_1463345056979110000");
 		enterPanel.setLayout(null);
+		enterPanel.setVisible(true);
 		
-		JButton btnAcademicianEntrance = new JButton("Academician entrance");
+		final JPanel academicianPanel = new JPanel();
+		frame.getContentPane().add(academicianPanel, "name_1463345066077977000");
+		academicianPanel.setLayout(null);
+		academicianPanel.setVisible(false);
+		
+		final JPanel studentPanel = new JPanel();
+		frame.getContentPane().add(studentPanel, "name_1463345114900106000");
+		studentPanel.setLayout(null);
+		studentPanel.setVisible(false);
+		
+		final JPanel LogInPanel = new JPanel();
+		frame.getContentPane().add(LogInPanel, "name_1463376116988117000");
+		LogInPanel.setLayout(null);
+		LogInPanel.setVisible(false);
+		
+		final JPanel SignUpPanel = new JPanel();
+		frame.getContentPane().add(SignUpPanel, "name_1463376149184625000");
+		SignUpPanel.setLayout(null);
+		SignUpPanel.setVisible(false);
+		
+		JButton btnAcademicianEntrance = new JButton("Academician Entrance");
 		btnAcademicianEntrance.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				academicianPanel.setVisible(true);
 				enterPanel.setVisible(false);
+			
 			}
 		});
-		btnAcademicianEntrance.setBounds(73, 75, 217, 29);
+		btnAcademicianEntrance.setBounds(122, 93, 189, 29);
 		enterPanel.add(btnAcademicianEntrance);
 		
 		JButton btnStudentEntrance = new JButton("Student Entrance");
-		btnStudentEntrance.setBounds(73, 129, 217, 29);
+		btnStudentEntrance.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				studentPanel.setVisible(true);
+				enterPanel.setVisible(false);
+			}
+		});
+		btnStudentEntrance.setBounds(126, 160, 189, 29);
 		enterPanel.add(btnStudentEntrance);
 		
-		final JPanel academicianPanel = new JPanel();
-		frame.getContentPane().add(academicianPanel, "name_1463345066077977000");
+	
 		
-		JButton btnBackButton = new JButton("Back Button");
+		JButton btnBackButton = new JButton("Back");
+		btnBackButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				enterPanel.setVisible(true);
+				academicianPanel.setVisible(false);
+				
+			}
+		});
+		btnBackButton.setBounds(6, 6, 82, 29);
 		academicianPanel.add(btnBackButton);
 		
-		final JPanel studentPanel = new JPanel();
-		frame.getContentPane().add(studentPanel, "name_1463345114900106000");
+	
 		
-		JButton btnBackButton_1 = new JButton("Back button");
+		JButton btnBackButton_1 = new JButton("Back");
+		btnBackButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				enterPanel.setVisible(true);
+				studentPanel.setVisible(false);
+			}
+		});
+		btnBackButton_1.setBounds(6, 6, 75, 29);
 		studentPanel.add(btnBackButton_1);
+		
+		JButton btnSignUp = new JButton("Sign Up");
+		btnSignUp.setBounds(165, 173, 117, 29);
+		studentPanel.add(btnSignUp);
+		
+		JButton btnLogIn = new JButton("Log In");
+		btnLogIn.setBounds(165, 112, 117, 29);
+		studentPanel.add(btnLogIn);
+		
+	
 	}
 }
