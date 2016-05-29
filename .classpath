@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="libs/jaunt1.1.6.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="libs/jena.jar"/>
+	<classpathentry kind="lib" path="libs/owlapi-osgidistribution-4.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
